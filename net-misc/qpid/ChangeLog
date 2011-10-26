@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/qpid
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*qpid-0.12 (26 Oct 2011)
+
+  26 Oct 2011; Xu Jingtao <jingtaozf@gmail.com>
+  +qpid-0.12.ebuild, +files/qpid-cpp.init, +files/qpidd.conf,
+  +files/qpidd.etc-conf, +files/qpidd.policy, +metadata.xml:
+  initial commit
+
