@@ -16,9 +16,12 @@ SRC_URI="mirror://apache/qpid/${PV}/${P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="cpg libcman sasl xml infiniband ssl static-libs test"
+IUSE="swig doxygen help2man cpg libcman sasl xml infiniband ssl static-libs test"
 
 COMMON_DEP="libcman? ( sys-cluster/cman-lib )
+	help2man? ( sys-apps/help2man )
+	swig? ( dev-lang/swig )
+	doxygen? ( app-doc/doxygen )
 	cpg? ( sys-cluster/openais )
 	>=dev-libs/boost-1.41.0-r3
 	sasl? ( dev-libs/cyrus-sasl )
@@ -53,9 +56,9 @@ src_prepare() {
 src_configure() {
 
 	local myeconfargs=(
-		--without-swig
-		--without-doxygen
-		--with-help2man
+		$(use_with swig)
+		$(use_with doxygen)
+		$(use_with help2man)
 		$(use_with cpg)
 		$(use_with libcman)
 		$(use_with sasl)

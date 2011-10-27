@@ -1,0 +1,11 @@
+--- qpid-0.12.old/python/setup.py	2011-10-27 20:24:22.304757957 +0800
++++ qpid-0.12/python/setup.py	2011-10-27 20:24:41.479756878 +0800
+@@ -303,7 +303,7 @@
+       author_email="dev@qpid.apache.org",
+       packages=["mllib", "qpid", "qpid.messaging", "qpid.tests",
+                 "qpid.tests.messaging"],
+-      package_data={"qpid": ["specs/*.dtd", "specs/*.xml"]},
++      package_data={"qpid": ["../specs/*.dtd", "../specs/*.xml"]},
+       scripts=["qpid-python-test"],
+       url="http://qpid.apache.org/",
+       license="Apache Software License",

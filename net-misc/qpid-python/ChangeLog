@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/qpid-tool
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*qpid-python-0.10 (04 Sep 2011)
+
+  04 Sep 2011; Andreis Vinogradovs <spamslepnoga@inbox.ru>
+  +qpid-tool-0.10.ebuild, +files/qpid-tool.init, +files/qpidd.conf,
+  +files/qpidd.etc-conf, +files/qpidd.policy, +metadata.xml:
+  initial commit
+

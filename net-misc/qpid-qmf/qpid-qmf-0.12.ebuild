@@ -17,6 +17,6 @@ SLOT="0"
 IUSE=""
 KEYWORDS="amd64 x86"
 
-RDEPEND="net-misc/qpid-cpp net-misc/qpid-python net-misc/qpid-qmf"
+RDEPEND="net-misc/qpid-cpp"
 
-# S="${WORKDIR}/qpid-tools-${PV}"
+# S="${WORKDIR}/qpid-qmf-${PV}"

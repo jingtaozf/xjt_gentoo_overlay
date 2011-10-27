@@ -6,7 +6,7 @@ EAPI=3
 
 PYTHON_DEPEND="2:2.4"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="A cross-platform Enterprise Messaging system which implements the Advanced Message Queuing Protocol"
 HOMEPAGE="http://qpid.apache.org"
@@ -17,6 +17,10 @@ SLOT="0"
 IUSE=""
 KEYWORDS="amd64 x86"
 
-RDEPEND="net-misc/qpid-cpp net-misc/qpid-python net-misc/qpid-qmf"
+RDEPEND="net-misc/qpid-cpp"
 
-# S="${WORKDIR}/qpid-tools-${PV}"
+S="${WORKDIR}/qpid-${PV}/python"
+
+src_prepare() {
+	epatch "${FILESDIR}/qpid-python-${PV}-specs.patch"
+}
